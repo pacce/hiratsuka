@@ -45,23 +45,19 @@ local function setup(config)
         -- MoreMsg
         -- , LineNr        = { fg = orange }
         -- , CursorLineNr  = { fg = orange, bg = gray.lightest }
-        , Pmenu         = { bg = white, fg = gray.medium }
-        , PmenuSel      = { bg = orange, fg = white }
-        -- , PmenuKind      = { bg = orange, fg = white }
-        -- , PmenuKindSel   = { bg = orange, fg = white }
-        -- , PmenuExtra     = { bg = orange, fg = white }
-        -- , PmenuExtraSel  = { bg = orange, fg = white }
-        , PmenuSbar      = { bg = orange, fg = white }
-        -- , PmenuThumb     = { bg = orange, fg = white }
+        , Pmenu         = { bg =      white, fg = black.dark, style = 'bold' }
+        , PmenuSel      = { bg = black.dark, fg =      white, style = 'bold' }
+        , PmenuSbar     = { bg = orange, fg = white }
         , NormalFloat   = { fg = gray.light }
         -- , FloatBorder   = { fg = '#ff0000' }
     }
     local link      = {
-            Character       = 'Constant'
-          , Number          = 'Constant'
-          , Boolean         = 'Constant'
-          , Float           = 'Constant'
-          , String          = 'Constant'
+            Character       = 'Constant'    -- a char constant      : 'c'
+          , Number          = 'Constant'    -- a number constant    : 0xFF
+          , Boolean         = 'Constant'    -- a boolean constant   : TRUE
+          , Float           = 'Constant'    -- a float constant     : 2.3e10
+          , String          = 'Constant'    -- a string constant    : "this is a string"
+
           , Conditional     = 'Statement'
           , Repeat          = 'Statement'
           , Label           = 'Statement'
