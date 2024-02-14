@@ -41,7 +41,7 @@ local function setup(config)
         , Ignore            = {}
         , Error             = { fg = accent }
         , Todo              = { fg = black.medium, bg = white, style = 'bold' }
-        , Directory         = { fg = accent }
+        , Directory         = {}
 
         , Search            = { fg = white, bg = accent }
 
