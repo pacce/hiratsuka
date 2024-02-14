@@ -25,6 +25,7 @@ local function setup(config)
     local accent    = orange
     local base      = { 
           Normal        = {}
+        , Visual        = { fg = white, bg = accent }
         , Cursor        = {}
         , Comment       = { fg = gray.light, style = 'italic' }
         , Statement     = { fg = gray.medium }
@@ -68,9 +69,10 @@ local function setup(config)
           , Define          = 'PreProc'
           , Macro           = 'PreProc'
           , PreCondit       = 'PreProc'
-          , StorageClass    = 'Type'
-          , Structure       = 'Type'
-          , Typedef         = 'Type'
+          , StorageClass    = 'Type'    -- static, register, volatile
+          , Structure       = 'Type'    -- struct, union, enum
+          , Typedef         = 'Type'    -- typedef
+
           , SpecialChar     = 'Special'
           , Tag             = 'Special'
           , Delimiter       = 'Special'
