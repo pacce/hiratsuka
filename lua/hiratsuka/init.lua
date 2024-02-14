@@ -45,11 +45,15 @@ local function setup(config)
         -- IncSearch
         -- Search
         -- MoreMsg
-        -- , LineNr        = { fg = accent }
-        -- , CursorLineNr  = { fg = accent, bg = gray.lightest }
+
+        , LineNr        = { fg = gray.lighter }
+        , SignColumn    = { bg = white }
+        , SignColumnSB  = { bg = white }
+        , EndOfBuffer   = { fg = gray.lighter }
+
         , Pmenu         = { bg =      white, fg = black.dark, style = 'bold' }
         , PmenuSel      = { bg = black.dark, fg =      white, style = 'bold' }
-        , PmenuSbar     = { bg = accent, fg = white }
+        , PmenuSbar     = { bg =     accent, fg =      white }
         , NormalFloat   = { fg = gray.light }
         -- , FloatBorder   = { fg = '#ff0000' }
     }
