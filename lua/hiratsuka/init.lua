@@ -23,7 +23,7 @@ local function setup(config)
     }
     local orange    = '#FF8700'
     local accent    = orange
-    local base      = { 
+    local base      = {
           Normal        = {}
         , Visual        = { fg = white, bg = accent }
         , Cursor        = {}
@@ -41,13 +41,9 @@ local function setup(config)
         , Ignore        = {}
         , Error         = { fg = accent }
         , Todo          = { fg = black.medium, bg = white, style = 'bold' }
-        -- SpecialKey
-        -- NonText
         , Directory     = { fg = accent }
-        -- ErrorMsg
-        -- IncSearch
-        -- Search
-        -- MoreMsg
+
+        , Search        = { fg = white, bg = accent }
 
         , LineNr        = { fg = gray.lighter }
         , SignColumn    = { bg = white }
@@ -58,7 +54,6 @@ local function setup(config)
         , PmenuSel      = { bg = black.dark, fg =      white, style = 'bold' }
         , PmenuSbar     = { bg =     accent, fg =      white }
         , NormalFloat   = { fg = gray.light }
-        -- , FloatBorder   = { fg = '#ff0000' }
     }
     local link      = {
             Character       = 'Constant'    -- a char constant      : 'c'
@@ -85,6 +80,9 @@ local function setup(config)
           , Delimiter       = 'Special'
           , SpecialComment  = 'Special'
           , Debug           = 'Special'
+
+          , IncSearch       = 'Search'
+          , Substitute      = 'Search'
     }
 
     for key, value in pairs(base) do
