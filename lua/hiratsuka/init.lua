@@ -55,6 +55,21 @@ local function setup(config)
         , PmenuSbar         = { bg =     accent, fg =      white }
         , NormalFloat       = { fg = gray.light }
 
+        , DiagnosticDefaultError    = { fg = accent }
+        , DiagnosticDefaultWarn     = { fg = accent }
+        , DiagnosticDefaultInfo     = { fg = accent }
+        , DiagnosticDefaultHint     = { fg = accent }
+
+        , DiagnosticSignError    = { fg = accent }
+        , DiagnosticSignWarn     = { fg = accent }
+        , DiagnosticSignInfo     = { fg = accent }
+        , DiagnosticSignHint     = { fg = accent }
+
+        , DiagnosticUnderlineError    = { fg = accent, style = 'underline' }
+        , DiagnosticUnderlineWarn     = { fg = accent, style = 'underline' }
+        , DiagnosticUnderlineInfo     = { fg = accent, style = 'underline' }
+        , DiagnosticUnderlineHint     = { fg = accent, style = 'underline' }
+
         , DiagnosticVirtualTextError    = { fg = gray.lighter }
         , DiagnosticVirtualTextWarn     = { fg = gray.lighter }
         , DiagnosticVirtualTextInfo     = { fg = gray.lighter }
@@ -88,6 +103,8 @@ local function setup(config)
 
           , IncSearch       = 'Search'
           , Substitute      = 'Search'
+
+          , ErrorMsg        = 'Error'
     }
 
     for key, value in pairs(base) do
