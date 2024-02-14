@@ -27,6 +27,8 @@ local function setup(config)
           Normal        = {}
         , Visual        = { fg = white, bg = accent }
         , Cursor        = {}
+        , MatchParen    = { fg = white, bg = accent, style = 'bold' }
+
         , Comment       = { fg = gray.light, style = 'italic' }
         , Statement     = { fg = gray.medium }
         , Constant      = { fg = accent }
@@ -34,6 +36,7 @@ local function setup(config)
         , PreProc       = { fg = gray.medium }
         , Type          = { fg = gray.medium }
         , Special       = { fg = gray.medium, style = 'italic' }
+
         , Underlined    = { style = 'underline' }
         , Ignore        = {}
         , Error         = { fg = accent }
