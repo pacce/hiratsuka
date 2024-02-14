@@ -22,32 +22,33 @@ local function setup(config)
         , lightest  = '#EEEEEE'
     }
     local orange    = '#FF8700'
+    local accent    = orange
     local base      = { 
           Normal        = {}
         , Cursor        = {}
         , Comment       = { fg = gray.light, style = 'italic' }
         , Statement     = { fg = gray.medium }
-        , Constant      = { fg = orange }
+        , Constant      = { fg = accent }
         , Operator      = { fg = gray.medium, style = 'bold' }
         , PreProc       = { fg = gray.medium }
         , Type          = { fg = gray.medium }
         , Special       = { fg = gray.medium, style = 'italic' }
         , Underlined    = { style = 'underline' }
         , Ignore        = {}
-        , Error         = { fg = orange }
+        , Error         = { fg = accent }
         , Todo          = { fg = black.medium, bg = white, style = 'bold' }
         -- SpecialKey
         -- NonText
-        , Directory     = { fg = orange }
+        , Directory     = { fg = accent }
         -- ErrorMsg
         -- IncSearch
         -- Search
         -- MoreMsg
-        -- , LineNr        = { fg = orange }
-        -- , CursorLineNr  = { fg = orange, bg = gray.lightest }
+        -- , LineNr        = { fg = accent }
+        -- , CursorLineNr  = { fg = accent, bg = gray.lightest }
         , Pmenu         = { bg =      white, fg = black.dark, style = 'bold' }
         , PmenuSel      = { bg = black.dark, fg =      white, style = 'bold' }
-        , PmenuSbar     = { bg = orange, fg = white }
+        , PmenuSbar     = { bg = accent, fg = white }
         , NormalFloat   = { fg = gray.light }
         -- , FloatBorder   = { fg = '#ff0000' }
     }
