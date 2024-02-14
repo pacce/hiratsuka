@@ -24,36 +24,41 @@ local function setup(config)
     local orange    = '#FF8700'
     local accent    = orange
     local base      = {
-          Normal        = {}
-        , Visual        = { fg = white, bg = accent }
-        , Cursor        = {}
-        , MatchParen    = { fg = white, bg = accent, style = 'bold' }
+          Normal            = {}
+        , Visual            = { fg = white, bg = accent }
+        , Cursor            = {}
+        , MatchParen        = { fg = white, bg = accent, style = 'bold' }
 
-        , Comment       = { fg = gray.light, style = 'italic' }
-        , Statement     = { fg = gray.medium }
-        , Constant      = { fg = accent }
-        , Operator      = { fg = gray.medium, style = 'bold' }
-        , PreProc       = { fg = gray.medium }
-        , Type          = { fg = gray.medium }
-        , Special       = { fg = gray.medium, style = 'italic' }
+        , Comment           = { fg = gray.light, style = 'italic' }
+        , Statement         = { fg = gray.medium }
+        , Constant          = { fg = accent }
+        , Operator          = { fg = gray.medium, style = 'bold' }
+        , PreProc           = { fg = gray.medium }
+        , Type              = { fg = gray.medium }
+        , Special           = { fg = gray.medium, style = 'italic' }
 
-        , Underlined    = { style = 'underline' }
-        , Ignore        = {}
-        , Error         = { fg = accent }
-        , Todo          = { fg = black.medium, bg = white, style = 'bold' }
-        , Directory     = { fg = accent }
+        , Underlined        = { style = 'underline' }
+        , Ignore            = {}
+        , Error             = { fg = accent }
+        , Todo              = { fg = black.medium, bg = white, style = 'bold' }
+        , Directory         = { fg = accent }
 
-        , Search        = { fg = white, bg = accent }
+        , Search            = { fg = white, bg = accent }
 
-        , LineNr        = { fg = gray.lighter }
-        , SignColumn    = { bg = white }
-        , SignColumnSB  = { bg = white }
-        , EndOfBuffer   = { fg = gray.lighter }
+        , LineNr            = { fg = gray.lighter }
+        , SignColumn        = { bg = white }
+        , SignColumnSB      = { bg = white }
+        , EndOfBuffer       = { fg = gray.lighter }
 
-        , Pmenu         = { bg =      white, fg = black.dark, style = 'bold' }
-        , PmenuSel      = { bg = black.dark, fg =      white, style = 'bold' }
-        , PmenuSbar     = { bg =     accent, fg =      white }
-        , NormalFloat   = { fg = gray.light }
+        , Pmenu             = { bg =      white, fg = black.dark, style = 'bold' }
+        , PmenuSel          = { bg = black.dark, fg =      white, style = 'bold' }
+        , PmenuSbar         = { bg =     accent, fg =      white }
+        , NormalFloat       = { fg = gray.light }
+
+        , DiagnosticVirtualTextError    = { fg = gray.lighter }
+        , DiagnosticVirtualTextWarn     = { fg = gray.lighter }
+        , DiagnosticVirtualTextInfo     = { fg = gray.lighter }
+        , DiagnosticVirtualTextHint     = { fg = gray.lighter }
     }
     local link      = {
             Character       = 'Constant'    -- a char constant      : 'c'
