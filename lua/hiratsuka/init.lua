@@ -9,27 +9,32 @@ local function setup(config)
     vim.o.termguicolors = true
     vim.g.colors_name   = 'hiratsuka'
 
-    local black     = {
-          dark      = '#000000'
-        , light     = '#262626'
-        , lighter   = '#4E4E4E'
-    }
-    local white     = '#FFFFFF'
     local gray      = {
-          medium    = '#767676'
-        , light     = '#A8A8A8'
-        , lighter   = '#C6C6C6'
-        , lightest  = '#EEEEEE'
+          darkest   = '#000000' -- hsl(0, 0,   0)
+        , darker    = '#262626' -- hsl(0, 0,  15)
+        , dark      = '#4d4d4d' -- hsl(0, 0,  30)
+        , medium    = '#808080' -- hsl(0, 0,  50)
+        , light     = '#b3b3b3' -- hsl(0, 0,  70)
+        , lighter   = '#d9d9d9' -- hsl(0, 0,  85)
+        , lightest  = '#ffffff' -- hsl(0, 0, 100)
     }
-    local orange    = '#FF8700'
+    local orange   = {
+          darkest   = '#663600' -- hsl( 32, 100, 20)
+        , darker    = '#995200' -- hsl( 32, 100, 30)
+        , dark      = '#cc6d00' -- hsl( 32, 100, 40)
+        , medium    = '#ff8700' -- hsl( 32, 100, 50)
+        , light     = '#ffa033' -- hsl( 32, 100, 60)
+        , lighter   = '#ffb866' -- hsl( 32, 100, 70)
+        , lightest  = '#ffcf99' -- hsl( 32, 100, 80)
+    }
     local green     = '#00ff00'
-    local accent    = orange
+    local accent    = orange.medium
 
     local base      = {
           Normal            = {}
-        , Visual            = { fg = white, bg = accent }
+        , Visual            = { fg = gray.lightest, bg = accent }
         , Cursor            = {}
-        , MatchParen        = { fg = white, bg = accent, style = 'bold' }
+        , MatchParen        = { fg = gray.lightest, bg = accent, style = 'bold' }
 
         , Comment           = { fg = gray.light, style = 'italic' }
         , Statement         = { fg = gray.medium }
@@ -38,24 +43,24 @@ local function setup(config)
         , PreProc           = { fg = gray.medium }
         , Type              = { fg = gray.medium }
         , Special           = { fg = gray.medium, style = 'italic' }
-        , Function          = { fg = black.dark, style = 'bold' }
+        , Function          = { fg = gray.dark, style = 'bold' }
 
         , Underlined        = { style = 'underline' }
         , Ignore            = {}
         , Error             = { fg = accent }
-        , Todo              = { fg = black.medium, bg = white, style = 'bold' }
+        , Todo              = { fg = gray.medium, bg = gray.lightest, style = 'bold' }
         , Directory         = {}
 
-        , Search            = { fg = white, bg = accent }
+        , Search            = { fg = gray.lightest, bg = accent }
 
         , LineNr            = { fg = gray.lighter }
-        , SignColumn        = { bg = white }
-        , SignColumnSB      = { bg = white }
+        , SignColumn        = { bg = gray.lightest }
+        , SignColumnSB      = { bg = gray.lightest }
         , EndOfBuffer       = { fg = gray.lighter }
 
-        , Pmenu             = { bg =      white, fg = black.dark, style = 'bold' }
-        , PmenuSel          = { bg = black.dark, fg =      white, style = 'bold' }
-        , PmenuSbar         = { bg =     accent, fg =      white }
+        , Pmenu             = { bg = gray.lightest, fg =     gray.dark, style = 'bold' }
+        , PmenuSel          = { bg =     gray.dark, fg = gray.lightest, style = 'bold' }
+        , PmenuSbar         = { bg =        accent, fg = gray.lightest }
         , NormalFloat       = { fg = gray.light }
 
         , DiagnosticDefaultError    = { fg = accent }
@@ -80,7 +85,7 @@ local function setup(config)
 
         , ["@variable"]                     = {}
         , ["@variable.builtin"]             = { fg = accent }       -- For parameters of a function.
-        , ["@variable.parameter"]           = { fg = black.dark }   -- For parameters of a function.
+        , ["@variable.parameter"]           = { fg = gray.dark }   -- For parameters of a function.
         , ["@variable.parameter.builtin"]   = { fg = green }        -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]V
 
         , ["@constant"]         = { fg = accent }
@@ -91,12 +96,12 @@ local function setup(config)
         , ["@module.builtin"]   = {}
         , ["@label"]            = {}
 
-        , ["@function"]             = { fg = black.dark, style = 'bold' }
+        , ["@function"]             = { fg = gray.dark, style = 'bold' }
         , ["@function.builtin"]     = { fg = accent }
-        , ["@function.call"]        = { fg = black.dark }
+        , ["@function.call"]        = { fg = gray.dark }
         , ["@function.macro"]       = { fg = accent }
-        , ["@function.method"]      = { fg = black.dark, style = 'bold' }
-        , ["@function.method.call"] = { fg = black.dark }
+        , ["@function.method"]      = { fg = gray.dark, style = 'bold' }
+        , ["@function.method.call"] = { fg = gray.dark }
 
         , ["@constructor"]  = { fg = gray.light } -- constructor calls and definitions
         , ["@operator"]     = { fg = gray.light } -- symbolic operators (e.g. + / *)
@@ -237,8 +242,8 @@ local function setup(config)
     }
 
     for key, value in pairs(base) do
-        local foreground    = value.fg or black.dark
-        local background    = value.bg or white
+        local foreground    = value.fg or gray.darkest
+        local background    = value.bg or gray.lightest
         local style         = value.style or 'NONE'
         local highlight     = string.format('highlight %s gui=%s guifg=%s guibg=%s'
             , key
