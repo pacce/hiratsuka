@@ -192,9 +192,9 @@ local function setup(config)
         , ['@comment.warning']  = warning
         , ['@comment.todo']     = todo
 
-        , ['@punctuation.delimiter']    = normal.lighter -- delimiters (e.g. ; / . / ,)
-        , ['@punctuation.bracket']      = normal.lighter -- brackets (e.g. () / {} / [])
-        , ['@punctuation.special']      = normal.lighter -- special symbols (e.g. {} in string interpolation)
+        , ['@punctuation.delimiter']    = normal.medium -- delimiters (e.g. ; / . / ,)
+        , ['@punctuation.bracket']      = normal.medium -- brackets (e.g. () / {} / [])
+        , ['@punctuation.special']      = normal.medium -- special symbols (e.g. {} in string interpolation)
 
         , ['@attribute']    = normal.lighter  -- attribute annotations (e.g. Python decorators)
         , ['@property']     = text  -- the key in key/value pairs
