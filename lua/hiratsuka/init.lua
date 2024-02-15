@@ -63,8 +63,8 @@ local function setup(config)
         , SignColumnSB      = { bg = gray.lightest }
         , EndOfBuffer       = { fg = gray.lighter }
 
-        , Pmenu             = { bg = gray.lightest, fg =     gray.dark, style = 'bold' }
-        , PmenuSel          = { bg =     gray.dark, fg = gray.lightest, style = 'bold' }
+        , Pmenu             = { bg = gray.lightest, fg =        accent, style = 'bold' }
+        , PmenuSel          = { bg =        accent, fg = gray.lightest, style = 'bold' }
         , PmenuSbar         = { bg =        accent, fg = gray.lightest }
         , NormalFloat       = { fg = gray.light }
 
