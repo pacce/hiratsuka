@@ -30,6 +30,11 @@ local function setup(config)
     local green     = '#00ff00'
     local accent    = orange.medium
 
+    local error         = orange.medium
+    local warning       = orange.lighter
+    local information   = orange.lightest
+    local hint          = gray.lighter
+
     local base      = {
           Normal            = {}
         , Visual            = { fg = gray.lightest, bg = accent }
@@ -47,7 +52,7 @@ local function setup(config)
 
         , Underlined        = { style = 'underline' }
         , Ignore            = {}
-        , Error             = { fg = accent }
+        , Error             = { fg = error }
         , Todo              = { fg = gray.medium, bg = gray.lightest, style = 'bold' }
         , Directory         = {}
 
@@ -63,25 +68,25 @@ local function setup(config)
         , PmenuSbar         = { bg =        accent, fg = gray.lightest }
         , NormalFloat       = { fg = gray.light }
 
-        , DiagnosticDefaultError    = { fg = accent }
-        , DiagnosticDefaultWarn     = { fg = accent }
-        , DiagnosticDefaultInfo     = { fg = accent }
-        , DiagnosticDefaultHint     = { fg = accent }
+        , DiagnosticDefaultError    = { fg = error }
+        , DiagnosticDefaultWarn     = { fg = warning }
+        , DiagnosticDefaultInfo     = { fg = information }
+        , DiagnosticDefaultHint     = { fg = hint }
 
-        , DiagnosticSignError    = { fg = accent }
-        , DiagnosticSignWarn     = { fg = accent }
-        , DiagnosticSignInfo     = { fg = accent }
-        , DiagnosticSignHint     = { fg = accent }
+        , DiagnosticSignError    = { fg = error }
+        , DiagnosticSignWarn     = { fg = warning }
+        , DiagnosticSignInfo     = { fg = information }
+        , DiagnosticSignHint     = { fg = hint }
 
-        , DiagnosticUnderlineError    = { fg = accent, style = 'underline' }
-        , DiagnosticUnderlineWarn     = { fg = accent, style = 'underline' }
-        , DiagnosticUnderlineInfo     = { fg = accent, style = 'underline' }
-        , DiagnosticUnderlineHint     = { fg = accent, style = 'underline' }
+        , DiagnosticUnderlineError    = { fg =        error, style = 'underline' }
+        , DiagnosticUnderlineWarn     = { fg =      warning, style = 'underline' }
+        , DiagnosticUnderlineInfo     = { fg =  information, style = 'underline' }
+        , DiagnosticUnderlineHint     = { fg =         hint, style = 'underline' }
 
-        , DiagnosticVirtualTextError    = { fg = gray.lighter }
-        , DiagnosticVirtualTextWarn     = { fg = gray.lighter }
-        , DiagnosticVirtualTextInfo     = { fg = gray.lighter }
-        , DiagnosticVirtualTextHint     = { fg = gray.lighter }
+        , DiagnosticVirtualTextError    = { fg = error }
+        , DiagnosticVirtualTextWarn     = { fg = warning }
+        , DiagnosticVirtualTextInfo     = { fg = information }
+        , DiagnosticVirtualTextHint     = { fg = hint }
 
         , ["@variable"]                     = {}
         , ["@variable.builtin"]             = { fg = accent }       -- For parameters of a function.
